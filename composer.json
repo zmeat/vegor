@@ -1,0 +1,20 @@
+{
+    "name": "vegor/phpconsole",
+    "description": "a package for php pretty debug",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zhangjunwei",
+            "email": "zhangjunwei@yunniao.me"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Veger\\Console\\": "src/"
+        }
+    }
+}
