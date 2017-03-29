@@ -55,11 +55,11 @@ Class Console
     private function emitData(...$args)
     {
         $funcName = end($args);
-        $data = array_pop($args);
+        array_pop($args);
         try{
             $url = 'http://127.0.0.1:3334/';
             $headers = array('Accept' => 'application/json');
-            Requests::post($url, $headers, ['data' => $data, 'func' => $funcName]);
+            Requests::post($url, $headers, ['data' => $args, 'func' => $funcName]);
         }catch (\Exception $e) {
 
         }
