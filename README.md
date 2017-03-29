@@ -5,8 +5,8 @@
 
 # 安装
     composer require vegor/phpconsole
-    sudo chmod 777 /vendor/vegor/phpconsole/install.sh
-    sudo bash /vendor/vegor/phpconsole/install.sh
+    sudo chmod 777 vendor/vegor/phpconsole/install.sh
+    sudo bash vendor/vegor/phpconsole/install.sh
 
 
 
