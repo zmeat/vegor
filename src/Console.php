@@ -11,8 +11,8 @@ Class Console
     {
         $args = func_get_args();
         $funcName = end($args);
-        $data = array_pop($args);
-        foreach($data as $item) {
+        array_pop($args);
+        foreach($args as $item) {
             $this->emitData($item, $funcName);
         }
     }
@@ -20,11 +20,20 @@ Class Console
     // 输出信息到web控制台
     private function writeWebConsole()
     {
+        if(!isset($_SERVER['HTTP_USER_AGENT']) && empty($_SERVER['HTTP_USER_AGENT'])) {
+            return;
+        }
+
+        if(isset($_SERVER['HTTP_X_REQUESTED_WITH'])
+            && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+            return;
+        }
+
         $args = func_get_args();
         $funcName = end($args);
-        $data = array_pop($args);
+        array_pop($args);
         ob_start();
-        foreach($data as $item) {
+        foreach($args as $item) {
             $item = $this->stringify($item);
             $html = "<script type='text/javascript'> console.$funcName($item); </script>";
             echo $html;
@@ -81,6 +90,8 @@ Class Console
             $args[] = $subName;
             $this->writeConsole(...$args);
             $this->writeWebConsole(...$args);
+
+            return;
         }
 
         return $this->$name(...$args);
