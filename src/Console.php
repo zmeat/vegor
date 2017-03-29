@@ -1,6 +1,6 @@
 <?php
 
-namespace Voger\Console;
+namespace Vegor;
 
 use Requests;
 
