@@ -1,6 +1,6 @@
 {
-  "name": "vegor",
-  "version": "0.0.0",
+  "name": "vegor/jsconsole",
+  "version": "0.0.1",
   "description": "a package for php console",
   "main": "stout.js",
   "directories": {
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "https://github.com/zmeat/vegor.git"
   },
-  "author": "",
+  "author": "zmeat",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/zmeat/vegor/issues"
