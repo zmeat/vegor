@@ -1,0 +1,26 @@
+{
+  "name": "vegor",
+  "version": "0.0.0",
+  "description": "a package for php console",
+  "main": "stout.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zmeat/vegor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zmeat/vegor/issues"
+  },
+  "homepage": "https://github.com/zmeat/vegor",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}

@@ -10,11 +10,12 @@
         }
     ],
     "require": {
-        "php": ">=5.3.2"
+        "php": ">=5.3.2",
+        "rmccue/requests": "^1.7"
     },
     "autoload": {
         "psr-4": {
-            "Veger\\Console\\": "src/"
+            "Voger\\": "src/"
         }
     }
 }
