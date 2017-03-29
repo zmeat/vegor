@@ -45,10 +45,12 @@ Class Console
     // 发送请求信息到web控制台，如果未打开控制台，消息不会输出到控制台 但是不影响输出到web控制
     private function emitData(...$args)
     {
+        $funcName = end($args);
+        $data = array_pop($args);
         try{
             $url = 'http://127.0.0.1:3334/';
             $headers = array('Accept' => 'application/json');
-            Requests::post($url, $headers, ['data' => $args[0], 'func' => $args[1]]);
+            Requests::post($url, $headers, ['data' => $data, 'func' => $funcName]);
         }catch (\Exception $e) {
 
         }
