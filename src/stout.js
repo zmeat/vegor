@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
+var port = 3334;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -30,4 +31,4 @@ app.post('/', function (req, res) {
 	return res.end();
 });
 
-app.listen(3334);
+app.listen(port);
