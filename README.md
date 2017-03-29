@@ -1,15 +1,38 @@
-# this is a package for php console
+# This Is A Package For Php Pretty Console
 
-**`usage`**
+# 环境依赖
+    nodejs  php
 
-`use Vegor/Console;`
+# 安装
+    composer require vegor/phpconsole
+    sudo chmod 777 /vendor/vegor/phpconsole/install.sh
+    sudo bash /vendor/vegor/phpconsole/install.sh
 
-`Console::log('test text');`
 
-`Console::warn('test text1', 'test text2', ...);`
 
-`$a = [ 'a' => [], 'b' => '1'];`
+# usage
 
-`Console::info($a, $a, $a);`
+    use Vegor/Console;
+    
+    Console::log('test text');
+    
+    Console::warn('test text1', 'test text2', ...);
+    
+    $a = [ 'a' => [], 'b' => '1'];
+    
+    Console::info($a, $a, $a);
+
+# 打开phpconsole查看调试信息
+
+    shell> phpconsole
+   
+ 
+# 关闭使用Ctrl^C组合键
+
+    注意:
+        打开phpconsole 控制台查看时会占用本地端口3334
+        多个项目同时使用时会将信息同事输出到同一个控制台
+        控制台暂只支持打开一个
+
 
 

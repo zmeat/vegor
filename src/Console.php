@@ -59,7 +59,7 @@ Class Console
         try{
             $url = 'http://127.0.0.1:3334/';
             $headers = array('Accept' => 'application/json');
-            Requests::post($url, $headers, ['data' => $args, 'func' => $funcName]);
+            Requests::post($url, $headers, ['data' => $args[0], 'func' => $funcName]);
         }catch (\Exception $e) {
 
         }
@@ -73,6 +73,7 @@ Class Console
             'info',
             'warn',
             'error',
+            'debug',
         ];
 
         if(in_array($method, $mapMethod)) {
@@ -85,7 +86,7 @@ Class Console
 
     public function __call($name, $args)
     {
-        if(strpos($name, 'veger_') > 0) {
+        if(strpos($name, 'veger_') == 0) {
             $subName = explode('_', $name)[1];
             $args[] = $subName;
             $this->writeConsole(...$args);
