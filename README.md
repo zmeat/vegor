@@ -10,6 +10,6 @@
 
 `$a = [ 'a' => [], 'b' => '1'];`
 
-`Console.info($a, $a, $a);`
+`Console::info($a, $a, $a);`
 
 
