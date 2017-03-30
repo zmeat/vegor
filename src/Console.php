@@ -72,7 +72,6 @@ Class Console
     private function emitData(...$args)
     {
         $funcName = end($args);
-        array_pop($args);
         try{
             $url = 'http://127.0.0.1:3334/';
             $headers = array('Accept' => 'application/json');
