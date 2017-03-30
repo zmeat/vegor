@@ -26,7 +26,6 @@
 
     shell> phpconsole
    
- 
 # 关闭使用Ctrl^C组合键
 
     注意:
