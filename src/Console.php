@@ -29,6 +29,23 @@ Class Console
             return;
         }
 
+        if(isset($_SERVER['REQUEST_URI'])
+            && (strpos($_SERVER['REQUEST_URI'], '/v1')
+                || strpos($_SERVER['REQUEST_URI'], '/v2') > 0
+                || strpos($_SERVER['REQUEST_URI'], '?') > 0
+                || strpos($_SERVER['REQUEST_URI'], '&') > 0
+                || strpos($_SERVER['REQUEST_URI'], 'from=') > 0
+            )
+        ) {
+            return;
+        }
+
+        if(isset($_SERVER['REQUEST_METHOD'])
+            && strtolower($_SERVER['REQUEST_METHOD']) != 'get'
+        ) {
+            return;
+        }
+
         $args = func_get_args();
         $funcName = end($args);
         array_pop($args);
