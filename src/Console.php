@@ -73,7 +73,6 @@ Class Console
             'info',
             'warn',
             'error',
-            'debug',
         ];
 
         if(in_array($method, $mapMethod)) {

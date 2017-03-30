@@ -27,7 +27,7 @@ app.post('/', function (req, res) {
 
 		switch (func) {
 			case 'log' :
-				console.log(data);
+				console.log(colors.log(convertData(data)));
 				break;
 			case 'info':
 				console.info(colors.info(convertData(data)));
@@ -38,10 +38,7 @@ app.post('/', function (req, res) {
 			case 'error' :
 				console.error(colors.error(convertData(data)));
 				break;
-			case 'debug' :
-				console.debug(colors.debug(convertData(data)));
-				break;
-			default: console.log(data);
+			default: console.log(colors.log(convertData(data)));
 		}
 	}
 
